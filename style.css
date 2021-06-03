@@ -18,7 +18,7 @@ body {
   padding: 0;
 } */
 
-.previous-operand{
+/* .previous-operand{
   background-color: #fff;
   width: 400px;
   height: 75px;
@@ -34,11 +34,15 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 2.2rem;
-}
+} */
 
 .text{
+  background-color: #fff;
+  width: 400px;
+  height: 75px;
   margin: 0;
-  padding: auto;
+  padding: 10px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
