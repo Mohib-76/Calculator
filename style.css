@@ -1,8 +1,17 @@
 body {
-  background-color: #393e46;
+  background-color: #0a1931;
 }
 
-.calculator{
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.calculator-text {
   margin: 0;
   padding: 0;
   font-family: 'Permanent Marker', cursive;
@@ -10,67 +19,41 @@ body {
   color: #00ead3;
 }
 
-/* .screen{
-  background-color: #fff;
-  width: 400px;
-  height: 150px;
-  margin: 0;
-  padding: 0;
-} */
-
-/* .previous-operand{
-  background-color: #fff;
-  width: 400px;
-  height: 75px;
-  margin: 0;
-  padding: 10px;
-  font-size: 2.2rem;
-}
-
-.current-operand{
-  background-color: #fff;
-  width: 400px;
-  height: 75px;
-  margin: 0;
-  padding: 10px;
-  font-size: 2.2rem;
-} */
-
-.text{
-  background-color: #fff;
-  width: 400px;
-  height: 75px;
-  margin: 0;
-  padding: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-hr{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-top: 1px;
-}
-.mainBody{
+.mainBody {
   height: 600px;
   width: 400px;
   padding: 0;
   position: relative;
   top: 0px;
   margin: auto;
+  box-shadow: 10px 13px 20px 2px #090c27;
 }
 
-.buttons-div{
-  background-color: #542e71;
+.text {
+  color: #fff;
+  width: 400px;
+  height: 75px;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #151515;
+  border: solid;
+  border-radius: 15px;
+  border-color: #28b5b5;
+}
+
+.buttons-div {
+  background-color: #28b5b5;
   height: 450px;
   width: 400px;
   margin: 0;
   padding: 0;
   display: inline-block;
+  border-radius: 20px;
 }
 
-.button{
+.button {
   padding: 0;
   margin: 0;
   border: 0;
@@ -81,22 +64,25 @@ hr{
   font-size: 1.6rem;
   font-weight: bold;
   color: white;
+  border: solid;
+  border-color: #28b5b5;
+  border-radius: 20px;
 }
 
-.button:hover{
+.button:hover {
   background-color: #022e57;
 }
 
-.c{
+.c {
   width: 200px;
   background-color: #f21170;
 }
 
-.c:hover{
+.c:hover {
   background-color: #ff449f;
 }
 
-.p{
+.p {
   height: 180px;
   width: 100px;
   position: absolute;
@@ -105,35 +91,35 @@ hr{
   bottom: 90px;
 }
 
-.equal{
+.equal {
   background-color: #2940d3;
 }
 
-.equal:hover{
-  background-color: #39a9cb;
+.equal:hover {
+  background-color: #0f4c75;
 }
 
-.p:hover{
+.p:hover {
   background-color: #a6d6d6;
   color: black;
 }
 
-.m:hover{
+.m:hover {
   background-color: #f9b208;
   color: black;
 }
 
-.ml:hover{
+.ml:hover {
   background-color: #4aa96c;
   color: black;
 }
 
-.d:hover{
+.d:hover {
   background-color: #907fa4;
   color: black;
 }
 
-footer{
+footer {
   text-align: center;
   font-size: 1rem;
   color: #caf7e3;
@@ -141,4 +127,8 @@ footer{
   margin-top: 5px;
   padding: 0;
   font-family: 'Sigmar One', cursive;
+}
+
+.pressed {
+  background-color: #f7fd04;
 }

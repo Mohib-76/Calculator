@@ -1,40 +1,20 @@
-var buttons = document.querySelectorAll("button");
-var screen1 = document.querySelector(".text1");
-var screen2 = document.querySelector(".text2");
-
-for(var i=0 ; i<buttons.length; i++){
-  buttons[i].addEventListener("click", function(event){
-    // console.log(this.innerHTML);
-    if(this.innerHTML != "=" && this.innerHTML != "C"){
-      screen1.value += this.innerHTML;
-    }
-    else if (this.innerHTML === "="){
-      screen2.value = "= " + eval(screen1.value);
-    }
-    else if (this.innerHTML === "C"){
-      screen1.value = "";
-      screen2.value = "";
-    }
-  });
-}
-
-// var keys = ["1", "2", "3" ,"4" , "5", "6", "7", "8", "9", "0", "+", "-", "*", "/", "." , "(" , ")"];
-
-document.addEventListener("keydown" , function(event){
-    // console.log(event.key);
-    // for(var i=0;i<keys.length;i++){
-    //   if(event.key === keys[i]){
-    //     screen1.innerHTML += event.key;
-    //   }
-    // }
-    // if(event.key === "Backspace"){
-    //   screen1.innerHTML = screen1.innerHTML.substr(0,screen1.innerHTML.length-1);
-    // }
-    if (event.key === "=" || event.key === "Enter"){
-      screen2.value = "= " + eval(screen1.value);
-    }
-    // else if (event.key === "C"){
-    //   screen1.innerHTML = "";
-    //   screen2.innerHTML = "";
-    // }
-  });
+$("button").click(function() {
+  if (this.innerText === "=") {
+    let text3 = eval(document.querySelector(".text2").value);
+    document.querySelector(".text1").value = document.querySelector(".text2").value;
+    document.querySelector(".text2").value = text3;
+  } else if (this.innerText === "C") {
+    document.querySelector(".text1").value = "";
+    document.querySelector(".text2").value = "";
+  } else {
+    document.querySelector(".text2").value += this.innerText;
+  }
+  this.slideUp();
+});
+$(document).keydown(function(event) {
+  if (event.key === "Enter") {
+    let text3 = eval(document.querySelector(".text2").value);
+    document.querySelector(".text1").value = document.querySelector(".text2").value;
+    document.querySelector(".text2").value = text3;
+  }
+});
